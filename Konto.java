@@ -14,7 +14,7 @@ public void einzahlen(double betrag){
     if (betrag > 0){
         this.kontostand = kontostand + betrag;
         //Double auf 2 Nachkommastellen reduzieren mit printf
-        System.out.printf(betrag + " € wurden erfolgreich auf ihr Konto eingezahlt. Neuer Kontostand: %.2f €\n", this.kontostand);
+        System.out.printf(betrag + " € wurden erfolgreich auf ihr Konto eingezahlt. Ihr neuer Kontostand lautet: %.2f €\n", this.kontostand);
     }
 }
 
