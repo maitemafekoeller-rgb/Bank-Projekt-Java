@@ -9,7 +9,7 @@
 - Formatierte Ausgabe von Kontobewegungen und Beträgen auf zwei Nachkommastellen.
 
 ### Technische Umsetzung und OOP-Konzepte
-## Das Projekt demonstriert die Anwendung wesentlicher Konzepte der objektorientierten Softwareentwicklung:
+#### Das Projekt demonstriert die Anwendung wesentlicher Konzepte der objektorientierten Softwareentwicklung:
 - Vererbung: Die Klasse Girokonto erweitert die Basisklasse Konto (extends), um deren Eigenschaften zu nutzen und zu spezifizieren.
 - Kapselung: Die Attribute der Klassen sind geschützt und werden kontrolliert über Getter- und Setter-Methoden (z. B. getKontostand) angesprochen oder verändert.
 - Konstruktoren: Verwendung von Konstruktoren zur Initialisierung von Objekten sowie der Aufruf des Elternkonstruktors mittels super().
