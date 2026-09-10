@@ -1,11 +1,11 @@
 public class Girokonto extends Konto {
     
-double dispoLimit;
+double tagesLimit;
 
 //Kontruktor wird aufgerufen
-public Girokonto(String kontonummer, double kontostand, double dispoLimit){
+public Girokonto(String kontonummer, double kontostand, double tagesLimit){
     super(kontonummer, kontostand);
-        this.dispoLimit = dispoLimit;
+        this.tagesLimit = tagesLimit;
     }
 
     //Methode zur Regulierung der Auszahlung
@@ -16,19 +16,20 @@ boolean auszahlung(double betrag){
     }
  
     //Berechnung zur Ausgabe des Kontostandes nach Abzug des Betrages
-    if(getkontostand() + dispoLimit >= betrag){
+    // Begrenzung der Auszahlung durch ein Tageslimit
+    if(getkontostand() >= betrag && tagesLimit > betrag){
         setkontostand(getkontostand() - betrag);
         System.out.printf(betrag + " € wurden erfolgreich von ihrem Konto abgehoben. Ihr neuer Kontostand lautet: %.2f €\n", getkontostand());
         return true;
     }
-
-    // Regulierung der Auszahlung durch ein Dispolimit
-    else{
-        System.out.println("Ihr Limit von: " + dispoLimit + " wurde überschritten. Auszahlung abgelehnt.");
-        return false;
-
+    //Überschreitung des Tageslimits
+    else {
+        System.out.println("Ihr Tageslimit von: " + tagesLimit + " € wurde überschritten. Auszahlung abgelehnt.");
+        return true ;
     }
+    
 }
+
 }
 
 

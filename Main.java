@@ -8,9 +8,11 @@ public class Main {
    System.out.println("Willkommen");
 
    //Methodenaufruf
-   meinKonto.einzahlen(45);
+   meinKonto.einzahlen(30);
 
-   meinKonto.auszahlung(40);
+   meinKonto.auszahlung(50);
+
+
 
     }
 }
